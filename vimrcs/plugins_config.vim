@@ -29,7 +29,7 @@ map <leader>o :BufExplorer<cr>
 " => MRU plugin
 """"""""""""""""""""""""""""""
 let MRU_Max_Entries = 400
-map <leader>f :MRU<CR>
+map <leader>u :MRU<CR>
 
 
 """"""""""""""""""""""""""""""
@@ -47,8 +47,8 @@ nmap <C-n> <Plug>yankstack_substitute_newer_paste
 let g:ctrlp_working_path_mode = 0
 
 " Quickly find and open a file in the current working directory
-let g:ctrlp_map = '<C-f>'
-map <leader>j :CtrlP<cr>
+" let g:ctrlp_map = '<C-f>'
+map <leader>f :CtrlP<cr>
 
 " Quickly find and open a buffer
 map <leader>b :CtrlPBuffer<cr>
