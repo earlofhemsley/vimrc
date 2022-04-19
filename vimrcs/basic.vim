@@ -328,11 +328,11 @@ map <leader>x :e ~/buffer.md<cr>
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
 
-" Toggle folding using F9
-inoremap <F9> <C-O>za
-nnoremap <F9> za
-onoremap <F9> <C-C>za
-vnoremap <F9> zf 
+" Toggle folding using F2
+inoremap <F2> <C-O>za
+nnoremap <F2> za
+onoremap <F2> <C-C>za
+vnoremap <F2> zf 
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
