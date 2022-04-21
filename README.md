@@ -1,4 +1,4 @@
-# The Ultimate vimrc
+# My Ultimate vimrc
 
 Shamelessly forked from [amix/vimrc](https://github.com/amix/vimrc.git)
 
