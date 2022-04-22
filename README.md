@@ -330,10 +330,6 @@ Open [ctrlp.vim](https://github.com/kien/ctrlp.vim) plugin to quickly find a fil
     au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
 
 
-[ale](https://github.com/dense-analysis/ale) to easily go to the next Ale syntax/lint error:
-
-    nmap <silent> <leader>a <Plug>(ale_next_wrap)
-
 [vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides) the default mapping to toggle the plugin is (`<leader>ig`)
 
     You can also use the following commands inside Vim:
