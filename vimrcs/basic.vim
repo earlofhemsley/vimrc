@@ -227,19 +227,21 @@ map <leader>l :bnext<cr>
 map <leader>h :bprevious<cr>
 
 " Useful mappings for managing tabs
-map <leader>tn :tabnew<cr>
-map <leader>to :tabonly<cr>
-map <leader>tx :tabclose<cr>
-map <leader>tm :tabmove
-map <leader>tl :tabnext<cr>
-map <leader>tk :tabprev<cr>
+nmap <leader>tn :tabnew<cr>
+nmap <leader>tc :tabclose<cr>
+nmap <C-q> :tabclose<cr>
+nmap <leader>to :tabonly<cr>
+nmap <leader>tm :tabmove
+nmap <C-Tab> :tabnext<cr>
+nmap <leader>tl :tabnext<cr>
+nmap <leader>th :tabprev<cr>
 
 " split tabs to new vim instances
 nmap <C-S-s> :execute "bdelete \| !gvim" shellescape(expand('%:p'), 1)<cr> 
 
-" Let 'tl' toggle between this and the last accessed tab
+" Let 'tt' toggle between this and the last accessed tab
 let g:lasttab = 1
-nmap <Leader>tl :exe "tabn ".g:lasttab<CR>
+nmap <Leader>tt :exe "tabn ".g:lasttab<CR>
 au TabLeave * let g:lasttab = tabpagenr()
 
 " Switch CWD to the directory of the open buffer
