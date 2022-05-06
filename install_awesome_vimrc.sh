@@ -17,4 +17,13 @@ try
 catch
 endtry' > ~/.vimrc
 
+
+ideavimpath="$(eval echo "~$user")/.ideavimrc"
+if [ -e "$ideavimpath" -o -h "$ideavimpath" ]
+then
+  rm -f "$ideavimpath"
+fi
+
+ln -s ~/.vim_runtime/vimrcs/ideavimrc.vim "$ideavimpath"
+
 echo "Installed the Ultimate Vim configuration successfully! Enjoy :-)"

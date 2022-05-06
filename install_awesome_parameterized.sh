@@ -25,6 +25,13 @@ if [ "$2" = "--all" ]; then
         homepath=$(eval echo "~$user")
         IFS=''
         echo $VIMRC > ${homepath}/.vimrc
+
+        if [ -e "${homepath}/.ideavimrc" -o -h "${homepath}/.ideavimrc" ]
+        then
+          rm -f "${homepath}/.ideavimrc"
+        fi
+        ln -s ${homepath}/.vim_runtime/vimrcs/ideavimrc.vim ${homepath}/.ideavimrc
+
         unset IFS
         echo "Installed the Ultimate Vim configuration for user $user successfully! Enjoy :-)"
     done
@@ -37,6 +44,13 @@ else
         homepath=$(eval echo "~$user")
         IFS=''
         echo $VIMRC > ${homepath}/.vimrc
+
+        if [ -e "${homepath}/.ideavimrc" -o -h "${homepath}/.ideavimrc" ]
+        then
+          rm -f "${homepath}/.ideavimrc"
+        fi
+        ln -s ${homepath}/.vim_runtime/vimrcs/ideavimrc.vim ${homepath}/.ideavimrc
+
         unset IFS
         echo "Installed the Ultimate Vim configuration for user $user successfully! Enjoy :-)"
     done
