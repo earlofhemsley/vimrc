@@ -1,11 +1,24 @@
 " show line numbers
-set number
+set nu
 " show relative line numbers
-set relativenumber
+set rnu
 
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
 let mapleader = ","
+
+" toggle line numbers
+function! ToggleNumber() 
+    if &rnu == 1 
+        set nornu
+    elseif &nu == 1
+        set rnu
+    else
+        set nu
+        set rnu
+    endif
+endfunction 
+nmap <leader>nn :call ToggleNumber()<cr>
 
 " Fast saving
 nmap <leader>w :w!<cr>
