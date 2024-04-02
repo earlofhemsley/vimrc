@@ -33,7 +33,8 @@ nmap <C-Tab> :tabnext<cr>
 nmap <C-S-Tab> :tabprev<cr>
 nmap <leader>tl :tabnext<cr>
 nmap <leader>th :tabprev<cr>
-nmap <C-S-s> <C-W>v <C-W>h :tabclose<cr> <C-W>l
+nmap <C-S-s> <C-W>v <C-W>h <C-W>c <C-W>l
+nmap <leader>tc <C-W>c
 
 " Let 'tt' toggle between this and the last accessed tab
 let g:lasttab = 1
