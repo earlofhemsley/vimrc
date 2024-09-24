@@ -49,10 +49,11 @@ nmap <C-Tab> :tabnext<cr>
 nmap <C-S-Tab> :tabprev<cr>
 nmap <leader>tl :tabnext<cr>
 nmap <leader>th :tabprev<cr>
-nmap <C-S-s> <C-W>v <C-W>h :tabclose<cr> <C-W>l
+nmap <C-S-s> <C-W>v <C-W>l
+
 " trying out these new mappings
 nnoremap <leader>qa :qa<cr>
-nnoremap <leader>qq :tabonly<cr>:tabclose<cr>
+nnoremap <leader>qq :tabonly<cr> :tabclose<cr>
 nnoremap <leader>qw :tabclose<cr>
 nnoremap <leader>qn :tabnext<cr>
 nnoremap <leader>qp :tabprev<cr>
