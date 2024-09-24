@@ -30,6 +30,10 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"set line number and relative line number
+set nu
+set rnu
+
 " Sets how many lines of history VIM has to remember
 set history=500
 
@@ -183,9 +187,6 @@ set smarttab
 set shiftwidth=4
 set tabstop=4
 
-" Linebreak on 500 characters
-set lbr
-set tw=500
 
 set ai "Auto indent
 set si "Smart indent
