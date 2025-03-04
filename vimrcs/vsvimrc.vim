@@ -29,12 +29,8 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 " Useful mappings for managing tabs
-nmap <C-Tab> :tabnext<cr>
-nmap <C-S-Tab> :tabprev<cr>
-nmap <leader>tl :tabnext<cr>
-nmap <leader>th :tabprev<cr>
-nmap <C-S-s> <C-W>v <C-W>h <C-W>c <C-W>l
 nmap <leader>tc <C-W>c
+nmap <leader>ts <C-W>v 
 
 " Let 'tt' toggle between this and the last accessed tab
 let g:lasttab = 1
