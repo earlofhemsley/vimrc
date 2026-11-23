@@ -152,3 +152,16 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 " Copy the link to the line of a Git repository to the clipboard
 nnoremap <leader>v :.GBrowse!<CR>
 xnoremap <leader>v :'<'>GBrowse!<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => WSL Clipboard
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if has("wsl")
+  let g:clipboard = {
+        \ 'name': 'win32yank-wsl',
+        \ 'copy': { '+': ['win32yank.exe', '-i', '--crlf'], '*': ['win32yank.exe', '-i', '--crlf'] },
+        \ 'paste': { '+': ['win32yank.exe', '-o', '--lf'], '*': ['win32yank.exe', '-o', '--lf'] },
+        \ 'cache_enabled': 0,
+        \ }
+  set clipboard=unnamedplus
+endif

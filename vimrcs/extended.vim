@@ -13,6 +13,8 @@
     set gfn=IBM\ Plex\ Mono:h10,Hack:h10,Source\ Code\ Pro:h15,Menlo:h15
  elseif has("win16") || has("win32")
      set gfn=IBM\ Plex\ Mono:h10,Source\ Code\ Pro:h12,Bitstream\ Vera\ Sans\ Mono:h11
+ elseif has("wsl")
+     set gfn=IBM\ Plex\ Mono:h10
  elseif has("gui_gtk2")
      set gfn=IBM\ Plex\ Mono\ 10,:Hack\ 10,Source\ Code\ Pro\ 12,Bitstream\ Vera\ Sans\ Mono\ 11
  elseif has("linux")
