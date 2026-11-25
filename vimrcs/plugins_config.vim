@@ -157,11 +157,12 @@ xnoremap <leader>v :'<'>GBrowse!<CR>
 " => WSL Clipboard
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has("wsl")
+  " WSLg syncs X11 clipboard with Windows
   let g:clipboard = {
-        \ 'name': 'win32yank-wsl',
-        \ 'copy': { '+': ['win32yank.exe', '-i', '--crlf'], '*': ['win32yank.exe', '-i', '--crlf'] },
-        \ 'paste': { '+': ['win32yank.exe', '-o', '--lf'], '*': ['win32yank.exe', '-o', '--lf'] },
-        \ 'cache_enabled': 0,
+        \ 'name': 'xclip-wslg',
+        \ 'copy': { '+': ['xclip', '-quiet', '-i', '-selection', 'clipboard'], '*': ['xclip', '-quiet', '-i', '-selection', 'primary'] },
+        \ 'paste': { '+': ['xclip', '-o', '-selection', 'clipboard'], '*': ['xclip', '-o', '-selection', 'primary'] },
+        \ 'cache_enabled': 1,
         \ }
   set clipboard=unnamedplus
 endif
